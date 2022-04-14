@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.get("/", (req,res)=>{
+res.send("Hello memories API")});
 
 const CONNECTION_URL = 'mongodb://localhost/MERN-CRUD';
 const PORT = process.env.PORT|| 5000;
